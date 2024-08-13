@@ -35,8 +35,9 @@ export default function Home() {
         />
         <Card
           title="Currículo"
-          description="É um ótimo meio para ver com mais detalhes as minhas habilidades"
-          href="https://github.com/ryansldev"
+          description="É um ótimo meio para ver detalhadamente as minhas habilidades"
+          href="/cv.pdf"
+          download
         />
       </CardList>
     </main>
