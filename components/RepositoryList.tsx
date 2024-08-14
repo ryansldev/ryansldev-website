@@ -1,3 +1,5 @@
+'use client'
+
 import { Repo } from "@/types/Repository";
 import { Repository } from "./Repository";
 
