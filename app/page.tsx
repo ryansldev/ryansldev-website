@@ -31,7 +31,7 @@ export default function Home() {
         <Card
           title="Projetos"
           description="Dê uma olhada em meus projetos públicos"
-          href="https://github.com/ryansldev"
+          href="/projects"
         />
         <Card
           title="Currículo"

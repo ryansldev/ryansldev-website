@@ -14,7 +14,7 @@ export function Card({
   download = false,
 }: CardProps) {
   return (
-    <Link target="_blank" href={href} className="flex flex-1 flex-col gap-3 justify-center w-72 min-h-40 px-7 py-2 bg-main-900 rounded-lg border border-main-800 hover:border-main-700 transition" download>
+    <Link target="_blank" href={href} className="flex flex-1 flex-col gap-3 justify-center w-72 min-h-40 px-7 py-2 bg-main-900 rounded-lg border border-main-800 hover:border-main-700 transition" download={download}>
       <h3 className="text-2xl font-extrabold tracking-[-0.04px]">{title}</h3>
       <span className="text-main-500 font-medium">{description}</span>
     </Link>
