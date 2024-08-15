@@ -40,7 +40,7 @@ export function Repository({
               <Card
                 title="Deploy"
                 description="Clique para ir até o deploy"
-                href={repository.html_url}
+                href={repository.homepage}
               />
             )}
           </CardList>
