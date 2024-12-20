@@ -6,7 +6,7 @@ interface CardListProps {
 
 export function CardList({ children }: CardListProps) {
   return (
-    <div className="py-4 flex gap-3 items-center justify-center max-w-[600px] mx-auto flex-wrap flex-1 px-4">
+    <div className="py-4 flex gap-3 items-center justify-center max-w-[549px] mx-auto flex-wrap flex-1 px-4">
       {children}
     </div>
   )
