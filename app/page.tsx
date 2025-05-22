@@ -9,7 +9,7 @@ export default function Home() {
     <main className="py-24">
       <div className="flex flex-col items-center justify-center">
         <Image
-          src="/profile.jpg"
+          src="/ryansldev.png"
           alt="Profile pic"
           height={192}
           width={192}
