@@ -1,0 +1,16 @@
+{
+  "en": {
+    "instagramDescription": "It's a great place to share my daily life.",
+    "linkedInDescription": "It's a great place to follow professional publications",
+    "projectsDescription": "Take a look at my public projects",
+    "curriculumDescription": "It's a great way to see my skills in detail",
+    "changeTo": "Change to"
+  },
+  "pt-br": {
+    "instagramDescription": "É um ótimo local pra compartilhar do meu dia a dia",
+    "linkedInDescription": "É um ótimo local pra acompanhar publicações profissionais",
+    "projectsDescription": "Dê uma olhada em meus projetos públicos",
+    "curriculumDescription": "É um ótimo meio para ver detalhadamente as minhas habilidades",
+    "changeTo": "Mudar para"
+  }
+}
