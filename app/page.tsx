@@ -18,7 +18,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    setLanguage(localStorage.getItem("lng") as "pt-br" | "en")
+    setLanguage((localStorage.getItem("lng") as "pt-br" | "en") ?? "pt-br")
   }, [])
 
   return (
