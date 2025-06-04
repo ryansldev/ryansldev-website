@@ -1,25 +1,21 @@
-'use client';
-
 import Image from "next/image";
 import { Card } from "../components/Card";
 import { CardList } from "../components/CardList";
-import { useEffect, useState } from "react";
+import dictionary from "./dictionary.json";
+import { headers } from "next/headers";
+import Link from "next/link";
 
-import dictionary from "./dictionary.json"
+type Props = {
+  searchParams: { lng?: "pt-br" | "en" };
+};
 
-export default function Home() {
-  const [language, setLanguage] = useState<"pt-br" | "en">("pt-br")
+export default function Home({ searchParams }: Props) {
+  const headersList = headers();
+  const broserAcceptLang = headersList.get("accept-language") || "en";
+  const defaultLangFromBrowser = broserAcceptLang.startsWith("pt") ? "pt-br" : "en";
 
-  const texts = dictionary[language]
-
-  async function changeLanguage(newLanguage: "pt-br" | "en") {
-    setLanguage(newLanguage)
-    localStorage.setItem("lng", newLanguage)
-  }
-
-  useEffect(() => {
-    setLanguage((localStorage.getItem("lng") as "pt-br" | "en") ?? "pt-br")
-  }, [])
+  const language: "pt-br" | "en" = searchParams.lng ?? defaultLangFromBrowser;
+  const texts = dictionary[language];
 
   return (
     <main className="py-24">
@@ -35,15 +31,15 @@ export default function Home() {
           Ryan Lima
         </h1>
         <h2 className="font-medium uppercase text-main-500 tracking-[-0.02px] leading-[44px]">
-          FullStack Developer since 2018
+          Software Engineer since 2022
         </h2>
-        <button
-          type="button"
-          onClick={() => changeLanguage(language === "pt-br" ? "en" : "pt-br")}
-          className="text-neutral-400 bg-neutral-800 px-5 h-12 rounded-lg"
+
+        <Link
+          href={`/?lng=${language === "pt-br" ? "en" : "pt-br"}`}
+          className="flex items-center justify-center text-neutral-400 bg-neutral-800 px-5 h-12 rounded-lg mt-4"
         >
           {texts?.changeTo} {language === "pt-br" ? "Inglês" : "Portuguese"}
-        </button>
+        </Link>
       </div>
 
       <CardList>
@@ -58,12 +54,12 @@ export default function Home() {
           href="https://www.linkedin.com/in/ryansldev/"
         />
         <Card
-          title="Projetos"
+          title={texts?.projects}
           description={texts?.projectsDescription}
           href="/projects"
         />
         <Card
-          title="Currículo"
+          title={texts?.curriculum}
           description={texts?.curriculumDescription}
           href={language === "pt-br" ? "/cv.pdf" : "/cv-en.pdf"}
           download
