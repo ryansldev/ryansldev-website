@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ryan Lima (ryansldev) | Software Engineer Portfolio",
-  description: "Portfolio of Ryan Lima, a Software Engineer since 2022. Also known as ryansldev on social media. Explore his work, skills, and projects."
+  title: "Ryan Lima (ryansldev) | Software Developer",
+  description: "Portfolio of Ryan Lima, a Software Developer since 2022. Also known as ryansldev on social media. Explore his work, skills, and projects."
 };
 
 export default function RootLayout({

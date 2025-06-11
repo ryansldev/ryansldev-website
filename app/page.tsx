@@ -31,7 +31,7 @@ export default function Home({ searchParams }: Props) {
           Ryan Lima
         </h1>
         <h2 className="font-medium uppercase text-main-500 tracking-[-0.02px] leading-[44px]">
-          Software Engineer since 2022
+          Software Developer since 2022
         </h2>
 
         <Link
